@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const TVShows = () => {
+const Genre = () => {
     const [data, setData] = useState([])
     const handleFetch = async () => {
             axios({
@@ -20,18 +20,27 @@ const TVShows = () => {
             handleFetch()
         }, [])
         return (
+            <>
+            <div className="justify-between py-10 mt-4 ml-12 ">
+              <h1 className="ml-10 text-3xl font-extrabold ">YOU MAY LIKE THIS</h1>
+              <hr className="w-[65%] ml-[350px]"></hr>
+              <h1 className="-mt-5 font-extrabold ml-[1300px]">See More</h1>
+            </div>
                 <div className='grid justify-center grid-cols-1 lg:grid-cols-5 gap-7'>
             {data.map((item)=>(
                 <div key={item.id}>
                     <img src={`https://image.tmdb.org/t/p/w500${item.poster_path}`}/>
                     <p>{item.title}</p>
+                    <p>{item.release_date}</p>
                 </div>
+                
         )
             
         )}
                
             </div>
+            </>
           )        
     };
  
-export default TVShows
+export default Genre

@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Main from "./pages/Main";
 import TVShows from "./pages/TVShows";
 import Explore from "./pages/Explore";
+import Genre from "./pages/Genre";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
             <Route index element={<Home />} />
             <Route path="/TVShows" element={<TVShows />} />
             <Route path="/Explore" element={<Explore />} />
+            <Route path="/Genre" element={<Genre />} />
           </Route>
         </Routes>
       </BrowserRouter>
