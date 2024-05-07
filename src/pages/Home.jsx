@@ -86,6 +86,7 @@ const Home = () => {
         )}
              
             </div>
+            
             <div className='grid grid-cols-5 gap-5 ' >
                 {like.map((item)=>(
                  <div key={item.id}>
